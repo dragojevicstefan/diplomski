@@ -87,7 +87,7 @@ public class UserController {
         mailMessage.setSubject("Complete Registration!");
         mailMessage.setFrom("scooters@gmail.com");
         mailMessage.setText("To confirm your account, please click here : "
-                +"https://localhost:8443/confirm-account?token="+confirmationToken.getConfirmationToken());
+                +"http://localhost:8443/confirm-account?token="+confirmationToken.getConfirmationToken());
 
         emailSenderService.sendEmail(mailMessage);
         return new ResponseEntity<String>("User successfully created", HttpStatus.CREATED);
